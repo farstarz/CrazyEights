@@ -1,0 +1,9 @@
+body{
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/008/416/941/large/zhang-fan-1.jpg?1512618366");
+}
+.cardImage{
+  width: 100%;
+}
+#drawCard{
+  display: block;
+}

@@ -8,71 +8,71 @@
     messagingSenderId: "87106865948"
   };
   firebase.initializeApp(config);
-
+  
   var database = firebase.database();
   database.ref().set({
-    "remainingCards": [{"suit":"C", "rank":"1", "img":"./images/PNG/AC.png"},
-                      {"suit":"C", "rank":"2", "img":"./images/PNG/2C.png"},
-                      {"suit":"C", "rank":"3", "img":"./images/PNG/3C.png"},
-                      {"suit":"C", "rank":"4", "img":"./images/PNG/4C.png"},
-                      {"suit":"C", "rank":"5", "img":"./images/PNG/5C.png"},
-                      {"suit":"C", "rank":"6", "img":"./images/PNG/6C.png"},
-                      {"suit":"C", "rank":"7", "img":"./images/PNG/7C.png"},
-                      {"suit":"C", "rank":"8", "img":"./images/PNG/8C.png"},
-                      {"suit":"C", "rank":"9", "img":"./images/PNG/9C.png"},
-                      {"suit":"C", "rank":"A", "img":"./images/PNG/10C.png"},
-                      {"suit":"C", "rank":"C", "img":"./images/PNG/JC.png"},
-                      {"suit":"C", "rank":"D", "img":"./images/PNG/QC.png"},
-                      {"suit":"C", "rank":"E", "img":"./images/PNG/KC.png"},
-                      {"suit":"D", "rank":"1", "img":"./images/PNG/AD.png"},
-                      {"suit":"D", "rank":"2", "img":"./images/PNG/2D.png"},
-                      {"suit":"D", "rank":"3", "img":"./images/PNG/3D.png"},
-                      {"suit":"D", "rank":"4", "img":"./images/PNG/4D.png"},
-                      {"suit":"D", "rank":"5", "img":"./images/PNG/5D.png"},
-                      {"suit":"D", "rank":"6", "img":"./images/PNG/6D.png"},
-                      {"suit":"D", "rank":"7", "img":"./images/PNG/7D.png"},
-                      {"suit":"D", "rank":"8", "img":"./images/PNG/8D.png"},
-                      {"suit":"D", "rank":"9", "img":"./images/PNG/9D.png"},
-                      {"suit":"D", "rank":"A", "img":"./images/PNG/10D.png"},
-                      {"suit":"D", "rank":"C", "img":"./images/PNG/JD.png"},
-                      {"suit":"D", "rank":"D", "img":"./images/PNG/QD.png"},
-                      {"suit":"D", "rank":"E", "img":"./images/PNG/KD.png"},
-                      {"suit":"H", "rank":"1", "img":"./images/PNG/AH.png"},
-                      {"suit":"H", "rank":"2", "img":"./images/PNG/2H.png"},
-                      {"suit":"H", "rank":"3", "img":"./images/PNG/3H.png"},
-                      {"suit":"H", "rank":"4", "img":"./images/PNG/4H.png"},
-                      {"suit":"H", "rank":"5", "img":"./images/PNG/5H.png"},
-                      {"suit":"H", "rank":"6", "img":"./images/PNG/6H.png"},
-                      {"suit":"H", "rank":"7", "img":"./images/PNG/7H.png"},
-                      {"suit":"H", "rank":"8", "img":"./images/PNG/8H.png"},
-                      {"suit":"H", "rank":"9", "img":"./images/PNG/9H.png"},
-                      {"suit":"H", "rank":"A", "img":"./images/PNG/10H.png"},
-                      {"suit":"H", "rank":"C", "img":"./images/PNG/JH.png"},
-                      {"suit":"H", "rank":"D", "img":"./images/PNG/QH.png"},
-                      {"suit":"H", "rank":"E", "img":"./images/PNG/KH.png"},
-                      {"suit":"S", "rank":"1", "img":"./images/PNG/AS.png"},
-                      {"suit":"S", "rank":"2", "img":"./images/PNG/2S.png"},
-                      {"suit":"S", "rank":"3", "img":"./images/PNG/3S.png"},
-                      {"suit":"S", "rank":"4", "img":"./images/PNG/4S.png"},
-                      {"suit":"S", "rank":"5", "img":"./images/PNG/5S.png"},
-                      {"suit":"S", "rank":"6", "img":"./images/PNG/6S.png"},
-                      {"suit":"S", "rank":"7", "img":"./images/PNG/7S.png"},
-                      {"suit":"S", "rank":"8", "img":"./images/PNG/8S.png"},
-                      {"suit":"S", "rank":"9", "img":"./images/PNG/9S.png"},
-                      {"suit":"S", "rank":"A", "img":"./images/PNG/10S.png"},
-                      {"suit":"S", "rank":"C", "img":"./images/PNG/JS.png"},
-                      {"suit":"S", "rank":"D", "img":"./images/PNG/QS.png"},
-                      {"suit":"S", "rank":"E", "img":"./images/PNG/KS.png"}],
+    "remainingCards": [{"suit":"B", "rank":"1", "img":"./assets/images/PNG/AC.png"},
+                      {"suit":"B", "rank":"2", "img":"./assets/images/PNG/2C.png"},
+                      {"suit":"B", "rank":"3", "img":"./assets/images/PNG/3C.png"},
+                      {"suit":"B", "rank":"4", "img":"./assets/images/PNG/4C.png"},
+                      {"suit":"B", "rank":"5", "img":"./assets/images/PNG/5C.png"},
+                      {"suit":"B", "rank":"6", "img":"./assets/images/PNG/6C.png"},
+                      {"suit":"B", "rank":"7", "img":"./assets/images/PNG/7C.png"},
+                      {"suit":"B", "rank":"8", "img":"./assets/images/PNG/8C.png"},
+                      {"suit":"B", "rank":"9", "img":"./assets/images/PNG/9C.png"},
+                      {"suit":"B", "rank":"A", "img":"./assets/images/PNG/10C.png"},
+                      {"suit":"B", "rank":"C", "img":"./assets/images/PNG/JC.png"},
+                      {"suit":"B", "rank":"D", "img":"./assets/images/PNG/QC.png"},
+                      {"suit":"B", "rank":"E", "img":"./assets/images/PNG/KC.png"},
+                      {"suit":"A", "rank":"1", "img":"./assets/images/PNG/AD.png"},
+                      {"suit":"A", "rank":"2", "img":"./assets/images/PNG/2D.png"},
+                      {"suit":"A", "rank":"3", "img":"./assets/images/PNG/3D.png"},
+                      {"suit":"A", "rank":"4", "img":"./assets/images/PNG/4D.png"},
+                      {"suit":"A", "rank":"5", "img":"./assets/images/PNG/5D.png"},
+                      {"suit":"A", "rank":"6", "img":"./assets/images/PNG/6D.png"},
+                      {"suit":"A", "rank":"7", "img":"./assets/images/PNG/7D.png"},
+                      {"suit":"A", "rank":"8", "img":"./assets/images/PNG/8D.png"},
+                      {"suit":"A", "rank":"9", "img":"./assets/images/PNG/9D.png"},
+                      {"suit":"A", "rank":"A", "img":"./assets/images/PNG/10D.png"},
+                      {"suit":"A", "rank":"C", "img":"./assets/images/PNG/JD.png"},
+                      {"suit":"A", "rank":"D", "img":"./assets/images/PNG/QD.png"},
+                      {"suit":"A", "rank":"E", "img":"./assets/images/PNG/KD.png"},
+                      {"suit":"H", "rank":"1", "img":"./assets/images/PNG/AH.png"},
+                      {"suit":"H", "rank":"2", "img":"./assets/images/PNG/2H.png"},
+                      {"suit":"H", "rank":"3", "img":"./assets/images/PNG/3H.png"},
+                      {"suit":"H", "rank":"4", "img":"./assets/images/PNG/4H.png"},
+                      {"suit":"H", "rank":"5", "img":"./assets/images/PNG/5H.png"},
+                      {"suit":"H", "rank":"6", "img":"./assets/images/PNG/6H.png"},
+                      {"suit":"H", "rank":"7", "img":"./assets/images/PNG/7H.png"},
+                      {"suit":"H", "rank":"8", "img":"./assets/images/PNG/8H.png"},
+                      {"suit":"H", "rank":"9", "img":"./assets/images/PNG/9H.png"},
+                      {"suit":"H", "rank":"A", "img":"./assets/images/PNG/10H.png"},
+                      {"suit":"H", "rank":"C", "img":"./assets/images/PNG/JH.png"},
+                      {"suit":"H", "rank":"D", "img":"./assets/images/PNG/QH.png"},
+                      {"suit":"H", "rank":"E", "img":"./assets/images/PNG/KH.png"},
+                      {"suit":"S", "rank":"1", "img":"./assets/images/PNG/AS.png"},
+                      {"suit":"S", "rank":"2", "img":"./assets/images/PNG/2S.png"},
+                      {"suit":"S", "rank":"3", "img":"./assets/images/PNG/3S.png"},
+                      {"suit":"S", "rank":"4", "img":"./assets/images/PNG/4S.png"},
+                      {"suit":"S", "rank":"5", "img":"./assets/images/PNG/5S.png"},
+                      {"suit":"S", "rank":"6", "img":"./assets/images/PNG/6S.png"},
+                      {"suit":"S", "rank":"7", "img":"./assets/images/PNG/7S.png"},
+                      {"suit":"S", "rank":"8", "img":"./assets/images/PNG/8S.png"},
+                      {"suit":"S", "rank":"9", "img":"./assets/images/PNG/9S.png"},
+                      {"suit":"S", "rank":"A", "img":"./assets/images/PNG/10S.png"},
+                      {"suit":"S", "rank":"C", "img":"./assets/images/PNG/JS.png"},
+                      {"suit":"S", "rank":"D", "img":"./assets/images/PNG/QS.png"},
+                      {"suit":"S", "rank":"E", "img":"./assets/images/PNG/KS.png"}],
       "player1": {"cardShown":false,
                   "currentCard":{"suit":"", "rank":"", "img":""},
                   "wins":0,
                   "losses":0,
-                  "turn":false},
+                  "chosen":false},
       "player2": {"cardShown":false,
                   "currentCard":{"suit":"", "rank":"", "img":""},
                   "wins":0,
                   "losses":0,
-                  "turn":false}
+                  "chosen":false}
       
   });
   var player={};
@@ -84,7 +84,9 @@
         player = temp.player1.currentCard;
         // console.log("player 1 button clicked");
       });  
-      
+      database.ref("player1").update({
+        "chosen":true
+      });
     });
 
   $("#player2-btn").on("click", function(){
@@ -94,6 +96,9 @@
         player = temp.player2.currentCard;
         // console.log(" player 2 button clicked");
       });  
+      database.ref("player2").update({
+        "chosen":true
+      });
     });
     
 
@@ -125,7 +130,6 @@
           "turn":false,
           "cardShown":true
         }).then(compareCards()).then(function(){
-          $("#player1Card").text(`<img src="`+temp.currentCard.img+`" alt=`+temp.currentCard.suit+temp.currentCard.rank+`"></img>`);
           $("#drawCard").prop("disabled", true);
         });
         // compareCards();
@@ -136,7 +140,6 @@
           "turn":false,
           "cardShown":true
         }).then(compareCards()).then(function(){
-          $("#player2Card").text(`<img src="`+temp.currentCard.img+`" alt=`+temp.currentCard.suit+temp.currentCard.rank+`"></img>`);
           $("#drawCard").prop("disabled", true);
         });
         // compareCards();
@@ -230,7 +233,8 @@
         
   }
 
-  database.ref("player1/cardShown").on("value", function(snapshot){
+  database.ref("player1").on("value", function(snapshot){
+    var currentCard = snapshot.val().currentCard;
     var cardShown = snapshot.val().cardShown;
     var wins = snapshot.val().wins;
     console.log(wins);
@@ -238,16 +242,25 @@
     console.log(losses);
     $("#player1Wins").text(wins);
     $("#player1Losses").text(losses);
-          
+    console.log("print card 1");
+    $("#player1Card").html(`<img class ="cardImage" src="`+currentCard.img+`" alt="`+currentCard.suit+currentCard.rank+`"></img>`);
+    if(snapshot.val().chosen){
+      $("#player1-btn").prop("disabled", true);
+    } else{
+      $("#player1-btn").prop("disabled", false);
+    }            
     if(whichPlayer==="player1"){
+      $("#playground").remove();
       if(cardShown===true){
         $("#drawCard").prop("disabled", true);
+        
       } else {
         $("#drawCard").prop("disabled", false);
       };
     }
   });
   database.ref("player2").on("value", function(snapshot){
+    var currentCard = snapshot.val().currentCard;
     var cardShown = snapshot.val().cardShown;
     var wins = snapshot.val().wins;
     console.log(snapshot.val());
@@ -255,8 +268,16 @@
     console.log(losses);
     $("#player2Wins").text(wins);
     $("#player2Losses").text(losses);
-          
+    console.log("print card 2");
+    $("#player2Card").html(`<img class="cardImage" src="`+currentCard.img+`" alt="`+currentCard.suit+currentCard.rank+`"></img>`);
+    if(snapshot.val().chosen){
+      $("#player2-btn").prop("disabled", true);
+    } else{
+      $("#player2-btn").prop("disabled", false);
+    }            
+                
     if(whichPlayer==="player2"){
+      $("#playground").remove();
       if(cardShown===true){
         $("#drawCard").prop("disabled", true);
       } else {

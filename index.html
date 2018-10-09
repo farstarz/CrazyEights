@@ -16,35 +16,45 @@
 <body class="bg-success">
   <div>
     <div class="row">
-      <div class="col-md-2">
-        <h4>Score: </h4>
-        <h3 class = "text-lg" id="player1Wins"></h3>
+      <div class="col-md-2 text-warning">
+        <h4>Wins: <span class = "text-lg" id="player1Wins"></span></h4>
+        <!-- <h4>Losses: <span class = "text-lg" id="player1Losses"></span></h4> -->
       </div>
       <div class="col-md-8"></div>
-      <div class="col-md-2">
-        <h4>Score: </h4>
-        <h3 class = "text-lg" id="player2Wins"></h3>
+      <div class="col-md-2 text-warning">
+        <h4>Wins: <span class = "text-lg" id="player2Wins"></span></h4>
+        <!-- <h4>Losses: <span class = "text-lg" id="player2Losses"></span></h4> -->
+      </div>
+    </div>
+    <div class="row" id="playground">
+      <div class="col-md-6 row">
+        <div class="col-md-4 text-primary">
+          <h3>Player 1</h3>
+          <h3 id="player1"></h3>
+          <button id="player1-btn" data-player="player1" class="btn btn-success">Choose Player 1</button>
+        </div>
+        <div class="col-md-8"></div>
+      </div>
+      <div class="col-md-6 row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4 text-primary">
+          <h3>Player 2</h3>
+          <h3 id="player2"></h3>
+          <button id="player2-btn" data-player="player2" class="btn btn-success">Choose Player 2</button>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6" id="player1Card">
-        <div class="col-md-2">
-          <h2>Player 1</h2>
-          <h3 id="player1"></h3>
-          <button id="player1-btn" data-player="player1">Choose Player 1</button>
-        </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2" id="player1Card">
       </div>
-      <div class="col-md-6" id="player2Card">
-        <div class="col-md-2">
-          <h2>Player 2</h2>
-          <h3 id="player2"></h3>
-          <button id="player2-btn" data-player="player2">Choose Player 2</button>
-        </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-2" id="player2Card">
       </div>
+      <div class="col-md-2"></div>
     </div>
-    <h4 id="player1Losses"></h4>
-    <h4 id="player2Losses"></h4>
-    <button id="drawCard">Draw Card</button>
+      
+    <button id="drawCard" class="mx-auto btn btn-danger">Draw Card</button>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script src="./assets/javascript.js"></script>
   </div>
