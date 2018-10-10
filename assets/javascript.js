@@ -114,7 +114,7 @@
       // console.log(temp.player1);
       
 
-      var index = remainingCards.indexOf(player.currentCard);
+      var index = remainingCards.indexOf(player);
       if(index>-1){
         remainingCards.splice(index,1);
         database.ref().update({
@@ -161,59 +161,29 @@
       // console.log(player2);
       var cardShown1 = player1.cardShown;
       var cardShown2 = player2.cardShown;
-      console.log("player1: "+cardShown1+", player2: "+cardShown2);
+      // console.log("player1: "+cardShown1+", player2: "+cardShown2);
+      var remainingCards = snapshot.val().remainingCards;
+      // console.log(remainingCards.length);
       if(cardShown1===cardShown2===true){
         if(player1.currentCard.rank>player2.currentCard.rank){
-          // console.log("player1 rank higher");
-          // cardShown1 = false;
-          // cardShown2 = false;
-          // console.log("player1: "+cardShown1+", player2: "+cardShown2);
           player1.wins += 1;
           player2.losses =+ 1;
-          // $("#player1Wins").text(player1.wins);
-          // $("#player2Wins").text(player2.wins);
-          // $("#player1Losses").text(player1.losses);
-          // $("#player2Losses").text(player2.losses);
           
         }else 
         if(player1.currentCard.rank<player2.currentCard.rank){
-          // console.log("player2 rank higher");
-          // cardShown1 = false;
-          // cardShown2 = false;
-          // console.log("player1: "+cardShown1+", player2: "+cardShown2);
           player2.wins += 1;
           player1.losses =+ 1;
-          // $("#player1Wins").text(player1.wins);
-          // $("#player2Wins").text(player2.wins);
-          // $("#player1Losses").text(player1.losses);
-          // $("#player2Losses").text(player2.losses);
           
         }else
         if(player1.currentCard.rank===player2.currentCard.rank){
           if(player1.currentCard.suit>player2.currentCard.suit){
-            // console.log("player1 rank higher");
-            // cardShown1 = false;
-            // cardShown2 = false;
-            // console.log("player1: "+cardShown1+", player2: "+cardShown2);
             player1.wins += 1;
             player2.losses =+ 1;
-            // $("#player1Wins").text(player1.wins);
-            // $("#player2Wins").text(player2.wins);
-            // $("#player1Losses").text(player1.losses);
-            // $("#player2Losses").text(player2.losses);
             
           }else
           if(player1.currentCard.suit<player2.currentCard.suit){
-            // console.log("player2 rank higher");
-            // cardShown1 = false;
-            // cardShown2 = false;
-            // console.log("player1: "+cardShown1+", player2: "+cardShown2);
             player2.wins += 1;
             player1.losses =+ 1;
-            // $("#player1Wins").text(player1.wins);
-            // $("#player2Wins").text(player2.wins);
-            // $("#player1Losses").text(player1.losses);
-            // $("#player2Losses").text(player2.losses);
             
           }  
           }
@@ -229,6 +199,17 @@
         });
          
       }
+      if(!remainingCards.length){
+        $("#drawCard").remove();
+        $("#player1Card").remove();
+        $("#player2Card").remove();
+        if(player1.wins>player2.wins){
+          $("#drawCard").html(`<h2>Player 1 Wins!</h2>`);
+        }
+        if(player1.wins<player2.wins){
+          $("#drawCard").html(`<h2>Player 2 Wins!</h2>`);
+        }
+      }
     });
         
   }
@@ -237,12 +218,12 @@
     var currentCard = snapshot.val().currentCard;
     var cardShown = snapshot.val().cardShown;
     var wins = snapshot.val().wins;
-    console.log(wins);
+    // console.log(wins);
     var losses = snapshot.val().losses;
-    console.log(losses);
+    // console.log(losses);
     $("#player1Wins").text(wins);
     $("#player1Losses").text(losses);
-    console.log("print card 1");
+    // console.log("print card 1");
     $("#player1Card").html(`<img class ="cardImage" src="`+currentCard.img+`" alt="`+currentCard.suit+currentCard.rank+`"></img>`);
     if(snapshot.val().chosen){
       $("#player1-btn").prop("disabled", true);
@@ -263,12 +244,12 @@
     var currentCard = snapshot.val().currentCard;
     var cardShown = snapshot.val().cardShown;
     var wins = snapshot.val().wins;
-    console.log(snapshot.val());
+    // console.log(snapshot.val());
     var losses = snapshot.val().losses;
-    console.log(losses);
+    // console.log(losses);
     $("#player2Wins").text(wins);
     $("#player2Losses").text(losses);
-    console.log("print card 2");
+    // console.log("print card 2");
     $("#player2Card").html(`<img class="cardImage" src="`+currentCard.img+`" alt="`+currentCard.suit+currentCard.rank+`"></img>`);
     if(snapshot.val().chosen){
       $("#player2-btn").prop("disabled", true);
