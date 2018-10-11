@@ -7,3 +7,6 @@ body{
 #drawCard{
   display: block;
 }
+#result{
+  display: block;
+}

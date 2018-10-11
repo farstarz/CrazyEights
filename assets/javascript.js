@@ -75,6 +75,8 @@
                   "chosen":false}
       
   });
+  var player1W = 0;
+  var player2W = 0;
   var player={};
   var whichPlayer = 0;
   $("#player1-btn").on("click", function(){
@@ -199,17 +201,7 @@
         });
          
       }
-      if(!remainingCards.length){
-        $("#drawCard").remove();
-        $("#player1Card").remove();
-        $("#player2Card").remove();
-        if(player1.wins>player2.wins){
-          $("#drawCard").html(`<h2>Player 1 Wins!</h2>`);
-        }
-        if(player1.wins<player2.wins){
-          $("#drawCard").html(`<h2>Player 2 Wins!</h2>`);
-        }
-      }
+      
     });
         
   }
@@ -220,7 +212,8 @@
     var wins = snapshot.val().wins;
     // console.log(wins);
     var losses = snapshot.val().losses;
-    // console.log(losses);
+    player1W = wins;
+    // console.log(player1W);
     $("#player1Wins").text(wins);
     $("#player1Losses").text(losses);
     // console.log("print card 1");
@@ -239,12 +232,14 @@
         $("#drawCard").prop("disabled", false);
       };
     }
+    result();
   });
   database.ref("player2").on("value", function(snapshot){
     var currentCard = snapshot.val().currentCard;
     var cardShown = snapshot.val().cardShown;
     var wins = snapshot.val().wins;
-    // console.log(snapshot.val());
+    player2W = wins;
+    // console.log(player2W);
     var losses = snapshot.val().losses;
     // console.log(losses);
     $("#player2Wins").text(wins);
@@ -265,9 +260,23 @@
         $("#drawCard").prop("disabled", false);
       };
     }
+    result();
   });
-      // console.log(remainingCards);
-    
+  function result(){
+    if(player1W+player2W>25){ 
+      console.log("testing");
+      $("#drawCard").hide();
+      $("#player1Card").remove();
+      $("#player2Card").remove();
+      if(player1W>player2W){
+        $("#result").html(`<h2>Player 1 Wins!</h2>`);
+      }
+      if(player1W<player2W){
+        $("#result").html(`<h2>Player 2 Wins!</h2>`);
+      }
+    }
+  }
+  
 
 
   // array of remainingCards
